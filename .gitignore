@@ -1,0 +1,9 @@
+.DS_Store
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# 社内限定（公開しない）
+00_全体方針.md
+98_講師向け解説.md
+99_運営者向けガイド.md

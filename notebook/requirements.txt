@@ -1,0 +1,39 @@
+# =============================================================================
+# 東京港（擬似）観測データ ワークショップ - ノートブックカーネル依存関係
+# =============================================================================
+# workshop.ipynb の先頭セルで以下のようにインストールする:
+#
+#     import sys
+#     !uv pip install --python {sys.executable} -r requirements.txt
+#
+# 本ワークショップで使用するパッケージのみを含む。
+#
+# 検証環境: SageMaker Distribution Image 4.4.1 (Python 3.12) /
+#           SageMaker Python SDK 3.20.0
+# =============================================================================
+
+# --- SageMaker Python SDK v3 suite ---
+sagemaker>=3,<4
+sagemaker-core>=2,<3
+sagemaker-train>=1,<2
+sagemaker-serve>=1,<2
+sagemaker-mlops>=1,<2
+
+# --- 実験管理（MLflow） ---
+mlflow<4
+sagemaker-mlflow>=0.5.0,<1
+
+# --- データ処理 ---
+pandas>=2,<3
+numpy<2.4
+scipy>=1.11,<2
+
+# --- モデル学習・評価 ---
+scikit-learn==1.4.2
+xgboost==3.0.5
+
+# --- モニタリング（データドリフト・モデル品質） ---
+evidently>=0.7.20
+
+# --- 可視化 ---
+matplotlib>=3.8,<4
